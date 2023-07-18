@@ -1,5 +1,6 @@
 package br.com.alura.loja.descontros;
 
+
 import java.math.BigDecimal;
 
 import br.com.alura.loja.orcamento.Orcamento;
@@ -7,12 +8,10 @@ import br.com.alura.loja.orcamento.Orcamento;
 public class CalculadoraDeDescontos {
 	
 	public BigDecimal calcular(Orcamento orcamento) {
-		
-		Desconto cadeiaDeDesconto = new DescontoParaOrcamentoComMaisDeCincoItens(
-				new DescontoParaOrcamentoMaiorComValorQueQuinhetos(
+		Desconto desconto = new DescontoParaOrcamentoComMaisDeCincoItens(
+				new DescontoParaOrcamentoComValorMaiorQueQuinhentos(
 						new SemDesconto()));
-		
-		return cadeiaDeDesconto.calcular(orcamento);
+		return desconto.calcular(orcamento);
 	}
 
 }
