@@ -11,10 +11,20 @@ public class SemDesconto extends Desconto{
 		// TODO Auto-generated constructor stub
 	}
 	
-	public BigDecimal calcular(Orcamento orcamento) {
+
+	@Override
+	public boolean deveAplicar(Orcamento orcamento) {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	protected BigDecimal efetuarCalculo(Orcamento orcamento) {
 		// TODO Auto-generated method stub
 		return BigDecimal.ZERO;
 	}
+
+	
 	
 
 }
