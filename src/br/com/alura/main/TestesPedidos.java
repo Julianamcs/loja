@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 import br.com.alura.loja.pedido.GeraPedido;
 import br.com.alura.loja.pedido.GeraPedidoHandler;
+import br.com.alura.loja.pedido.LogDePedido;
 import br.com.alura.loja.pedido.acao.EnviarPedidoPorEmail;
 import br.com.alura.loja.pedido.acao.CriarPedidoNoBanco;
 
@@ -20,9 +21,10 @@ public class TestesPedidos {
 		GeraPedido gerador = new GeraPedido(cliente, valorOrcamento, quantidadeItens);
 		GeraPedidoHandler handler = new GeraPedidoHandler(
 				Arrays.asList(new CriarPedidoNoBanco(), 
-				new EnviarPedidoPorEmail()
+				new EnviarPedidoPorEmail(),
+				new LogDePedido()
 				));
-		handler.execute(gerador);
+		handler.executar(gerador);
 		
 	}
 
