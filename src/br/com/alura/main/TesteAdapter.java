@@ -10,7 +10,7 @@ public class TesteAdapter {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Orcamento orcamento = new Orcamento(BigDecimal.TEN, 1);
+		Orcamento orcamento = new Orcamento();
 		orcamento.aprovar();
 		orcamento.finalizado();
 		
