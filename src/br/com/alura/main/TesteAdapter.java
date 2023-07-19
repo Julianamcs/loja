@@ -2,7 +2,6 @@ package br.com.alura.main;
 
 import java.math.BigDecimal;
 
-import br.com.alura.loja.descontros.CalculadoraDeDescontos;
 import br.com.alura.loja.http.JavaHttpClient;
 import br.com.alura.loja.orcamento.Orcamento;
 import br.com.alura.loja.orcamento.RegistroDeOrcamento;
